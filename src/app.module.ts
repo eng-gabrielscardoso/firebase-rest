@@ -6,6 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { EmployeesModule } from './employees/employees.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { AppService } from './app.service';
       load: [configuration],
       validationSchema,
     }),
+    EmployeesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
