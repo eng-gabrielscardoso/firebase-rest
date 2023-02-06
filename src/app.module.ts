@@ -1,5 +1,5 @@
-import { configuration } from './../config/configuration';
-import { validationSchema } from './../config/validation';
+import { configuration } from './config/configuration';
+import { validationSchema } from './config/validation';
 
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
