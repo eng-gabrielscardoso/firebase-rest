@@ -2,6 +2,11 @@ import * as Joi from 'joi';
 
 export const validationSchema: Joi.ObjectSchema<Joi.ObjectSchema> = Joi.object({
   /**
+   * Setup
+   */
+  NODE_ENV: Joi.string().default('development'),
+  PROJECT_AUTHOR: Joi.string().default('Gabriel Santos Cardoso'),
+  /**
    * Development setup
    */
   DEVELOPMENT_BASE_PORT: Joi.number().default('8082'),

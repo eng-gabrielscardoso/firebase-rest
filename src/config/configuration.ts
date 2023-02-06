@@ -1,6 +1,11 @@
 export const configuration = () => {
   return {
     /**
+     * Setup
+     */
+    NODE_ENV: process.env.NODE_ENV,
+    PROJECT_AUTHOR: process.env.PROJECT_AUTHOR,
+    /**
      * Development setup
      */
     DEVELOPMENT_BASE_PORT: process.env.PORT,
