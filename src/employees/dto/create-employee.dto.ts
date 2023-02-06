@@ -1,13 +1,19 @@
-import { IsString, MaxLength } from 'class-validator';
+import { IsNotEmpty, IsString, IsUUID, Length } from 'class-validator';
 
 export class CreateEmployeeDto {
+  @IsUUID()
+  @IsNotEmpty()
+  employeeId: string;
   @IsString()
-  @MaxLength(255)
-  company?: string;
+  @Length(5, 255)
+  @IsNotEmpty()
+  company: string;
   @IsString()
-  @MaxLength(255)
-  email?: string;
+  @Length(5, 255)
+  @IsNotEmpty()
+  email: string;
   @IsString()
-  @MaxLength(255)
-  name?: string;
+  @Length(5, 255)
+  @IsNotEmpty()
+  name: string;
 }

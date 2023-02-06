@@ -1,15 +1,15 @@
 import { PartialType } from '@nestjs/mapped-types';
-import { IsString, MaxLength } from 'class-validator';
+import { IsString, Length } from 'class-validator';
 import { CreateEmployeeDto } from './create-employee.dto';
 
 export class UpdateEmployeeDto extends PartialType(CreateEmployeeDto) {
   @IsString()
-  @MaxLength(255)
+  @Length(5, 255)
   company?: string;
   @IsString()
-  @MaxLength(255)
+  @Length(5, 255)
   email?: string;
   @IsString()
-  @MaxLength(255)
+  @Length(5, 255)
   name?: string;
 }
