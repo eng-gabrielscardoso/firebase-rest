@@ -6,7 +6,9 @@ import { ConfigModule } from '@nestjs/config';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+
 import { EmployeesModule } from './employees/employees.module';
+import { RecipientsModule } from './recipients/recipients.module';
 
 @Module({
   imports: [
@@ -16,6 +18,7 @@ import { EmployeesModule } from './employees/employees.module';
       validationSchema,
     }),
     EmployeesModule,
+    RecipientsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
